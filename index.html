@@ -1,0 +1,838 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ماجد - مصمم جرافيك</title>
+
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/line-awesome.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/smooth-scrollbar.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/rtl.css">
+
+</head>
+<body>
+
+    <div class="page-loader">
+        <div class="bounceball"></div>
+    </div>
+
+    <span class="icon-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </span>
+
+    <div class="global-color">
+        <span class="setting-toggle">
+            <i class="las la-cog"></i>
+        </span>
+        <div class="inner">
+            <div class="overlay"></div>
+            <div class="global-color-option">
+                <span class="close-settings">
+                    <i class="las la-times"></i>
+                </span>
+                <h2>الإعدادات</h2>
+                <div class="global-color-option-inner">
+                    <p>الألوان</p>
+                    <div class="color-boxed">
+                        <a href="#" class="clr-active" onclick="color1();"></a>
+                        <a href="#" onclick="color2();"></a>
+                        <a href="#" onclick="color3();"></a>
+                        <a href="#" onclick="color4();"></a>
+                        <a href="#" onclick="color5();"></a>
+                        <a href="#" onclick="color6();"></a>
+                        <a href="#" onclick="color7();"></a>
+                        <a href="#" onclick="color8();"></a>
+                    </div>
+
+                    <p>الاتجاه</p>
+                    <ul class="themes">
+                        <li><a href="#" onclick="setDirection('ltr');">من اليسار</a></li>
+                        <li><a href="#" onclick="setDirection('rtl');">من اليمين</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="responsive-sidebar-menu">
+        <div class="overlay"></div>
+        <div class="sidebar-menu-inner">
+            <div class="menu-wrap">
+                <p>القائمة</p>
+                <ul class="menu scroll-nav-responsive d-flex">
+                    <li>
+                        <a class="scroll-to" href="#home">
+                            <i class="las la-home"></i> <span>الرئيسية</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#about">
+                            <i class="lar la-user"></i> <span>عنّي</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#resume">
+                            <i class="las la-briefcase"></i> <span>السيرة</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#services">
+                            <i class="las la-stream"></i> <span>الخدمات</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#skills">
+                            <i class="las la-shapes"></i> <span>المهارات</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#portfolio">
+                            <i class="las la-grip-vertical"></i> <span>الأعمال</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#testimonial">
+                            <i class="lar la-comment"></i> <span>الشهادات</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#contact">
+                            <i class="las la-envelope"></i> <span>اتصل بي</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-social">
+                <p>وسائل التواصل</p>
+                <ul class="social-links d-flex align-items-center">
+                    <li>
+                        <a href=""><i class="lab la-twitter"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="lab la-linkedin-in"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="lab la-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="lab la-behance"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <ul class="menu scroll-nav d-flex">
+        <li>
+            <a class="scroll-to" href="#home">
+                <span>الرئيسية</span> <i class="las la-home"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#about">
+                <span>عنّي</span> <i class="lar la-user"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#resume">
+                <span>السيرة</span> <i class="las la-briefcase"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#services">
+                <span>الخدمات</span> <i class="las la-stream"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#skills">
+                <span>المهارات</span> <i class="las la-shapes"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#portfolio">
+                <span>الأعمال</span> <i class="las la-grip-vertical"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#testimonial">
+                <span>الشهادات</span> <i class="lar la-comment"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#contact">
+                <span>اتصل بي</span> <i class="las la-envelope"></i>
+            </a>
+        </li>
+    </ul>
+
+    <div class="left-sidebar">
+        <div class="sidebar-header d-flex align-items-center justify-content-between">
+            <img src="images/logo.png" alt="Logo">
+            <span class="designation">مصمم جرافيك</span>
+        </div>
+        <img class="me" src="images/me.jpg" alt="ماجد">
+        <h2 class="email">magdy@graphic-designer.com</h2>
+        <h2 class="address">القاهرة، مصر</h2>
+        <p class="copyright">© 2025 ماجد. جميع الحقوق محفوظة</p>
+        <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
+            <li>
+                <a href=""><i class="lab la-twitter"></i></a>
+            </li>
+            <li>
+                <a href=""><i class="lab la-linkedin-in"></i></a>
+            </li>
+            <li>
+                <a href=""><i class="lab la-instagram"></i></a>
+            </li>
+            <li>
+                <a href=""><i class="lab la-behance"></i></a>
+            </li>
+        </ul>
+        <a href="#" class="theme-btn">
+            <i class="las la-envelope"></i> وظفني!
+        </a>
+    </div>
+
+    <main class="drake-main">
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
+
+                <div class="left-sidebar">
+                    <div class="sidebar-header d-flex align-items-center justify-content-between">
+                        <img src="images/logo.png" alt="Logo">
+                        <span class="designation">مصمم جرافيك</span>
+                    </div>
+                    <img class="me" src="images/me.jpg" alt="ماجد">
+                    <h2 class="email">magdy@graphic-designer.com</h2>
+                    <h2 class="address">القاهرة، مصر</h2>
+                    <p class="copyright">© 2025 ماجد. جميع الحقوق محفوظة</p>
+                    <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
+                        <li>
+                            <a href=""><i class="lab la-twitter"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="lab la-linkedin-in"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="lab la-instagram"></i></a>
+                        </li>
+                        <li>
+                            <a href=""><i class="lab la-behance"></i></a>
+                        </li>
+                    </ul>
+                    <a href="#" class="theme-btn">
+                        <i class="las la-envelope"></i> وظفني!
+                    </a>
+                </div>
+
+                <section class="hero-section page-section scroll-to-page" id="home">
+                    <div class="custom-container">
+                        <div class="hero-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-home"></i> مقدمة
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">مرحباً، أنا <span>ماجد</span>، مصمم جرافيك</h1>
+                            </div>
+                            <p class="scroll-animation" data-animation="fade_from_bottom">أحوِّل الأفكار إلى تصاميم مبهرة. هويات تجارية، إعلانات، ومنتجات رقمية تحكي قصتك وتترك أثراً لا يُنسى.</p>
+                            <a href="#portfolio" class="go-to-project-btn scroll-to scroll-animation" data-animation="rotate_up">
+                                <img src="images/round-text.png" alt="Rounded Text">
+                                <i class="las la-arrow-down"></i>
+                            </a>
+        
+                            <div class="facts d-flex">
+                                <div class="left scroll-animation" data-animation="fade_from_left">
+                                    <h1>7+</h1>
+                                    <p>سنوات من<br>الخبرة</p>
+                                </div>
+                                <div class="right scroll-animation" data-animation="fade_from_right">
+                                    <h1>300+</h1>
+                                    <p>مشروع تصميم<br>في 15 دولة</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+        
+                <section class="about-area page-section scroll-to-page" id="about">
+                    <div class="custom-container">
+                        <div class="about-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="lar la-user"></i> عنّي
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">التصميم ليس مجرد شكل جميل<br>إنها <span>لغة بصرية</span></h1>
+                            </div>
+                            <p class="scroll-animation" data-animation="fade_from_bottom">منذ بداية رحلتي في عالم التصميم الجرافيكي منذ أكثر من 7 سنوات، 
+                                عملت مع علامات تجارية في مجالات متعددة مثل الأزياء والتجميل والمطاعم والتقنية. 
+                                أبدع في تصميم الهويات البصرية، الإعلانات المطبوعة والرقمية، تغليف المنتجات، وتصميم واجهات المستخدم. 
+                                أؤمن بأن كل تصميم يحكي قصة، وهدفي هو جعل قصتك تلمع. أعمل بأحدث أدوات التصميم 
+                                مثل Photoshop و Illustrator و InDesign و Figma لتحقيق رؤيتك الإبداعية.</p>
+                        </div>
+                    </div>
+                </section>
+        
+        
+                <section class="resume-area page-section scroll-to-page" id="resume">
+                    <div class="custom-container">
+                        <div class="resume-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-briefcase"></i> السيرة الذاتية
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">التعليم و <span>الخبرة</span></h1>
+                            </div>
+        
+                            <div class="resume-timeline">
+                                <div class="item scroll-animation" data-animation="fade_from_right">
+                                    <span class="date">2023 - حتى الآن</span>
+                                    <h2>مصمم جرافيك أول</h2>
+                                    <p>وكالة إبداع للتصميم - دبي</p>
+                                    <h2>مصمم جرافيك مستقل</h2>
+                                    <p>عن بُعد - عمل حر</p>
+                                </div>
+                                <div class="item scroll-animation" data-animation="fade_from_right">
+                                    <span class="date">2020 - 2023</span>
+                                    <h2>مصمم جرافيك</h2>
+                                    <p>شركة بصمة للتسويق</p>
+                                    <h2>مصمم منتجات</h2>
+                                    <p>مطبعة الأهلية</p>
+                                    <h2>مصمم واجهات مستخدم</h2>
+                                    <p>شركة تكافل الرقمية</p>
+                                </div>
+                                <div class="item scroll-animation" data-animation="fade_from_right">
+                                    <span class="date">2017 - 2020</span>
+                                    <h2>بكالوريوس في التصميم الجرافيكي</h2>
+                                    <p>جامعة القاهرة</p>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </section>
+        
+        
+                <section class="services-area page-section scroll-to-page" id="services">
+                    <div class="custom-container">
+                        <div class="services-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-stream"></i> الخدمات
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom"> <span>تخصصاتي</span></h1>
+                            </div>
+        
+                            <div class="services-items">
+                                <div class="service-item scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-palette"></i>
+                                    <h2>هويات بصرية</h2>
+                                    <p>أصمم هويات تجارية متكاملة تشمل الشعار، بطاقات العمل، الألوان، الخطوط، ودليل الهوية</p>
+                                    <span class="projects">80+ مشروع</span>
+                                </div>
+                                <div class="service-item scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-ad"></i>
+                                    <h2>تصاميم إعلانية</h2>
+                                    <p>أبدع في تصميم إعلانات مطبوعة ورقمية، بانرات، بوسترات، وإعلانات وسائل التواصل الاجتماعي</p>
+                                    <span class="projects">150+ مشروع</span>
+                                </div>
+                                <div class="service-item scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-box"></i>
+                                    <h2>تغليف منتجات</h2>
+                                    <p>أصمم تغليفاً إبداعياً لمنتجاتك يجذب الانتباه ويعكس هوية علامتك التجارية</p>
+                                    <span class="projects">40+ مشروع</span>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </section>
+        
+        
+                <section class="skills-area page-section scroll-to-page" id="skills">
+                    <div class="custom-container">
+                        <div class="skills-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-shapes"></i> مهاراتي
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom"><span>مميزاتي</span></h1>
+                            </div>
+        
+                            <div class="row skills text-center">
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="images/figma.png" alt="Adobe Photoshop">
+                                            <h1 class="percent">98%</h1>
+                                        </div>
+                                        <p class="name">Photoshop</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="images/framer.png" alt="Adobe Illustrator">
+                                            <h1 class="percent">95%</h1>
+                                        </div>
+                                        <p class="name">Illustrator</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_top">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="images/webflow.png" alt="Adobe InDesign">
+                                            <h1 class="percent">88%</h1>
+                                        </div>
+                                        <p class="name">InDesign</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_right">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="images/react.png" alt="Figma">
+                                            <h1 class="percent">92%</h1>
+                                        </div>
+                                        <p class="name">Figma</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="images/wordpress.png" alt="Adobe XD">
+                                            <h1 class="percent">85%</h1>
+                                        </div>
+                                        <p class="name">Adobe XD</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="images/laravel.png" alt="Blender">
+                                            <h1 class="percent">70%</h1>
+                                        </div>
+                                        <p class="name">Blender</p>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </section>
+        
+        
+                <section class="portfolio-area page-section scroll-to-page" id="portfolio">
+                    <div class="custom-container">
+                        <div class="portfolio-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-grip-vertical"></i> الأعمال
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom"> <span>مشاريع</span> مميزة</h1>
+                            </div>
+        
+                            <div class="row portfolio-items">
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-full">
+                                        <div class="portfolio-item-inner">
+                                            <a href="./assets/images/portfolio1.jpg" data-lightbox="example-1">
+                                                <img src="images/portfolio1.jpg" alt="هوية بصرية">
+                                            </a>
+        
+                                            <ul class="portfolio-categories">
+                                                <li>
+                                                    <a href="">هوية بصرية</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">شعار</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">علامة تجارية</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">هوية بصرية لمطعم ذا غريل - تصميم متكامل</a></h2>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-6 scroll-animation" data-animation="fade_from_left">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <a href="./assets/images/portfolio2.jpg" data-lightbox="example-1">
+                                                <img src="images/portfolio2.jpg" alt="تصميم إعلان">
+                                            </a>
+        
+                                            <ul class="portfolio-categories">
+                                                <li>
+                                                    <a href="">إعلانات</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">سوشيال ميديا</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">حملة إعلانية لمتجر أزياء - 30 تصميماً</a></h2>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <a href="./assets/images/portfolio3.jpg" data-lightbox="example-1">
+                                                <img src="images/portfolio3.jpg" alt="تغليف منتج">
+                                            </a>
+        
+                                            <ul class="portfolio-categories">
+                                                <li>
+                                                    <a href="">تغليف</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">منتج</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">تغليف منتجات عناية بالبشرة - خط إنتاج كامل</a></h2>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <a href="./assets/images/portfolio4.jpg" data-lightbox="example-1">
+                                                <img src="images/portfolio4.jpg" alt="تصميم واجهات">
+                                            </a>
+        
+                                            <ul class="portfolio-categories">
+                                                <li>
+                                                    <a href="">UI/UX</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">تطبيقات</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">تصميم واجهة تطبيق توصيل طعام - UX/UI</a></h2>
+                                    </div>
+                                </div>
+        
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <a href="./assets/images/portfolio5.jpg" data-lightbox="example-1">
+                                                <img src="images/portfolio5.jpg" alt="كتيب">
+                                            </a>
+        
+                                            <ul class="portfolio-categories">
+                                                <li>
+                                                    <a href="">طباعة</a>
+                                                </li>
+                                                <li>
+                                                    <a href="">كتيبات</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">كتيب تعريفي لشركة عقارات - 32 صفحة</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </section>
+        
+        
+                <section class="testimonial-area page-section scroll-to-page" id="testimonial">
+                    <div class="custom-container">
+                        <div class="testimonial-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="lar la-comment"></i> الشهادات
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">ماذا <span>يقولون عني</span></h1>
+                            </div>
+        
+                            <div class="testimonial-slider-wrap scroll-animation" data-animation="fade_from_bottom">
+                                <div class="owl-carousel testimonial-slider owl-theme">
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-inner">
+                                            <div class="author d-flex align-items-center">
+                                                <img src="images/testimonial-1.jpg" alt="عميل">
+                                                <div class="right">
+                                                    <h3>نورة السعيد</h3>
+                                                    <p class="designation">مالكة علامة <span>نوارة للعناية</span></p>
+                                                </div>
+                                            </div>
+                                            <p>“ماجد صمم هوية علامتي التجارية من الصفر، والنتيجة كانت أكثر من رائعة. 
+                                                فهم رؤيتي تماماً وحولها إلى تصاميم مبهرة. أنصح به بشدة.”</p>
+        
+                                            <a href="" class="project-btn">المشروع</a>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-inner">
+                                            <div class="author d-flex align-items-center">
+                                                <img src="images/testimonial-2.jpg" alt="عميل">
+                                                <div class="right">
+                                                    <h3>فهد المطيري</h3>
+                                                    <p class="designation">مدير التسويق في <span>مطاعم ذا غريل</span></p>
+                                                </div>
+                                            </div>
+                                            <p>“تعاملنا مع ماجد في تصميم الهوية البصرية للمطعم بالكامل. إبداعي، دقيق، وملتزم بالمواعيد. 
+                                                التصاميم نالت إعجاب الجميع.”</p>
+        
+                                            <a href="" class="project-btn">المشروع</a>
+                                        </div>
+                                    </div>
+                                    <div class="testimonial-item">
+                                        <div class="testimonial-item-inner">
+                                            <div class="author d-flex align-items-center">
+                                                <img src="images/testimonial-3.jpg" alt="عميل">
+                                                <div class="right">
+                                                    <h3>سلمى الراشد</h3>
+                                                    <p class="designation">مؤسسة <span>متجر وردة للأزياء</span></p>
+                                                </div>
+                                            </div>
+                                            <p>“ماجد مصمم موهوب جداً. صمم لنا تغليف المنتجات وحملة إعلانية كاملة. 
+                                                مبيعاتنا تضاعفت بعد ما غيرنا التصاميم. فنان بمعنى الكلمة.”</p>
+        
+                                            <a href="" class="project-btn">المشروع</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="testimonial-footer-nav">
+                                    <div class="testimonial-nav d-flex align-items-center">
+                                        <button class="prev"><i class="las la-angle-left"></i></button>
+                                        <div id="testimonial-slide-count"></div>
+                                        <button class="next"><i class="las la-angle-right"></i></button>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="clients-logos">
+                                <h4 class="scroll-animation" data-animation="fade_from_bottom">وثقت بي أكثر من 50 علامة تجارية حول العالم</h4>
+                                <div class="row align-items-center">
+                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
+                                        <img src="images/client-1.png" alt="client">
+                                    </div>
+                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
+                                        <img src="images/client-2.png" alt="client">
+                                    </div>
+                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_top">
+                                        <img src="images/client-3.png" alt="client">
+                                    </div>
+                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_right">
+                                        <img src="images/client-4.png" alt="client">
+                                    </div>
+                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
+                                        <img src="images/client-5.png" alt="client">
+                                    </div>
+                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
+                                        <img src="images/client-6.png" alt="client">
+                                    </div>
+                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_top">
+                                        <img src="images/client-7.png" alt="client">
+                                    </div>
+                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_right">
+                                        <img src="images/client-8.png" alt="client">
+                                    </div>
+                                </div>
+                            </div>
+        
+                        </div>
+                    </div>
+                </section>
+        
+        
+                <section class="pricing-area page-section scroll-to-page" id="pricing">
+                    <div class="custom-container">
+                        <div class="pricing-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-dollar-sign"></i> الأسعار
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom"><span>باقات</span> التصميم</h1>
+                            </div>
+        
+                            <div class="pricing-table-items">
+                                <div class="row">
+                                    <div class="col-md-6 scroll-animation" data-animation="fade_from_left">
+                                        <div class="pricing-table">
+                                            <div class="pricing-table-header">
+                                                <div class="top d-flex justify-content-between align-items-start">
+                                                    <h4>أساسي</h4>
+                                                    <p class="text-right">مشروع صغير؟<br>
+                                                        تصميم احترافي بميزانية مناسبة</p>
+                                                </div>
+                                                <h1>$199 <span>/ للمشروع</span></h1>
+                                            </div>
+                                            <ul class="feature-lists">
+                                                <li>تصميم شعار + هوية بصرية</li>
+                                                <li>بطاقة عمل (وجهين)</li>
+                                                <li>3 تصاميم لوسائل التواصل</li>
+                                                <li>ملفات مصدرية (AI, PSD)</li>
+                                                <li>تعديلين مجانيين</li>
+                                                <li>تسليم خلال 5 أيام</li>
+                                            </ul>
+                                            <a href="" class="theme-btn">اختر هذه الباقة</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
+                                        <div class="pricing-table">
+                                            <div class="pricing-table-header">
+                                                <div class="top d-flex justify-content-between align-items-start">
+                                                    <h4>شامل</h4>
+                                                    <p class="text-right">مشروع متكامل؟<br>
+                                                        باقة شاملة لكل احتياجاتك التصميمية</p>
+                                                </div>
+                                                <h1>$499 <span>/ للمشروع</span></h1>
+                                            </div>
+                                            <ul class="feature-lists">
+                                                <li>هوية بصرية متكاملة بالكامل</li>
+                                                <li>تصميم شعار + 3 أنواع منه</li>
+                                                <li>دليل الهوية البصرية (Brand Guide)</li>
+                                                <li>10+ تصاميم سوشيال ميديا</li>
+                                                <li>تصميم تغليف منتجات</li>
+                                                <li>تصميم واجهة موقع أو تطبيق</li>
+                                                <li>تعديلات غير محدودة</li>
+                                                <li>تسليم خلال 10 أيام</li>
+                                            </ul>
+                                            <a href="" class="theme-btn">اختر هذه الباقة</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="info scroll-animation" data-animation="fade_from_bottom">
+                                    تحتاج شيئاً مخصصاً؟<br>
+                                    تواصل معي ونصنع معاًomething مخصص يناسب احتياجك. <a href="">اتصل بي</a>
+                                </p>
+                            </div>
+        
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="contact-area page-section scroll-content" id="contact">
+                    <div class="custom-container">
+                        <div class="contact-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-envelope"></i> اتصل بي
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">لنصنع <span>معاً!</span></h1>
+                            </div>
+                            <h3 class="scroll-animation" data-animation="fade_from_bottom">magdy@graphic-designer.com</h3>
+                            <p id="required-msg">* الحقول المحددة إلزامية.</p>
+
+                            <form class="contact-form scroll-animation" data-animation="fade_from_bottom" method="POST" action="mailer.php">
+                                <div class="alert alert-success messenger-box-contact__msg" style="display: none" role="alert">
+                                    تم إرسال رسالتك بنجاح.
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <label for="full-name">الاسم الكامل <sup>*</sup></label>
+                                            <input type="text" name="full-name" id="full-name" placeholder="اسمك الكامل">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <label for="email">البريد الإلكتروني <sup>*</sup></label>
+                                            <input type="email" name="email" id="email" placeholder="بريدك الإلكتروني">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <label for="phone-number">رقم الهاتف <span>(اختياري)</span></label>
+                                            <input type="text" name="phone-number" id="phone-number" placeholder="رقم هاتفك">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <label for="subject">الموضوع <sup>*</sup></label>
+                                            <select name="subject" id="subject">
+                                                <option value="">اختر موضوعاً</option>
+                                                <option value="subject1">طلب هوية بصرية</option>
+                                                <option value="subject2">طلب تصاميم إعلانية</option>
+                                                <option value="subject3">استفسار عام</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <label for="budget">ميزانيتك <span>(اختياري)</span></label>
+                                            <input type="number" name="budget" id="budget" placeholder="ميزانيتك التقريبية للمشروع">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <label for="message">الرسالة</label>
+                                            <textarea name="message" id="message" placeholder="حدثني عن مشروعك التصميمي ..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group upload-attachment">
+                                            <div>
+                                                <label for="upload-attachment">
+                                                    <i class="las la-cloud-upload-alt"></i> إرفاق ملف
+                                                    <input type="file" name="file" id="upload-attachment">
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group submit-btn-wrap">
+                                            <button class="theme-btn" name="submit" type="submit" id="submit-form">إرسال الرسالة</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/owl.carousel.js"></script>
+    <script src="js/gsap.min.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <script src="js/ScrollToPlugin.min.js"></script>
+    <script src="js/lightbox.min.js"></script>
+    
+    <script src="js/main.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/color.js"></script>
+
+    <script>
+        function setDirection(dir) {
+            document.documentElement.setAttribute('dir', dir);
+            localStorage.setItem('site-direction', dir);
+        }
+        (function() {
+            var saved = localStorage.getItem('site-direction');
+            if (saved) {
+                document.documentElement.setAttribute('dir', saved);
+            }
+        })();
+    </script>
+
+</body></html>
